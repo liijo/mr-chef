@@ -1,0 +1,96 @@
+.arrow-down{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	float: right;
+	position: relative;
+	transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+.arrow-down:before,
+.arrow-down:after{
+	content: '';
+	position: absolute;
+	top: 7px;
+	width: 2px;
+	height: 12px;
+	background-color: #333;
+	transform-origin: 50% 50%;
+}
+.arrow-down:before{
+	left: 9px;
+	transform: rotate(45deg);	
+	-moz-transform: rotate(45deg);	
+	-webkit-transform: rotate(45deg);	
+}
+.arrow-down:after{
+	right: 9px;
+	transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+.collapsed .arrow-down{
+	transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+
+.card-header{
+	background-color: transparent;
+	border: 0;
+}
+.accordion .btn-block{
+	padding: 0;
+	color: #000;
+	font-weight: 500;
+	position: relative;
+}
+.accordion .btn-block:before{
+	content: '';
+	position: absolute;
+	right: 30px;
+	top: 15px;
+	left: 0;
+	height: 1px;
+	background-color: #ccc;
+}
+.accordion .btn-block span{
+	background-color: #fff;
+	position: relative;
+    padding-right: 20px;
+}
+.accordion .table td, 
+.accordion .table th{
+	border: 0;
+}
+
+.btn:hover,
+.btn:focus{
+	outline: 0;
+	box-shadow: none;
+	text-decoration: none;
+}
+
+.jumbotron{
+	border-radius: 25px;
+}
+.form-group-rounded select.form-control{
+	padding-right: 70px;
+}
+@media (min-width: 525px){
+	.form-group-rounded select.form-control{
+		min-width: 264px;
+	}
+}
+
+@media (max-width: 525px){
+	.accordion .table tr{
+		border-top: 1px solid #dee2e6;
+	}
+	.accordion .table td, 
+	.accordion .table th{
+		display: block;
+	}
+}
